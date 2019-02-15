@@ -2,5 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
-$myObject = new App\MyClass();
-$myObject->log();
+use App\Product;
+
+$product = new Product('Brie');
+$product->print();
