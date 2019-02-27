@@ -10,6 +10,22 @@
     
     <h2>Metabots</h2>
 
+    <?php 
+        $isAuth = false;
+        if(isset($_SESSION['isIngelogd'])){
+            $isAuth = $_SESSION['isIngelogd'];
+            $naam = $_SESSION['naam'];
+        }
+        
+           
+    ?>
+
+    <?php if(!$isAuth){ ?>
+        <a href="/index.php?action=loginform">Login</a>
+    <?php } else { ?>
+        <p>Welkom <?php echo $naam ?>! <a href="/index.php?action=logout">Logout</a></p>
+    <?php } ?>
+
     <p>Hier komt een lijst van metabots!</p>
 
     <table>

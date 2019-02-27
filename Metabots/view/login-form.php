@@ -7,15 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-        $message = "Empty"
-    ?>
+    
+    <h2>Login</h2>
 
-    <h2>Message of the day: <?php echo $message ?>
 
-    <form>
-        <input name="message">
-        <input type="submit">
+    <form action="index.php?action=login" method="POST">
+        <label>Password</label>
+        <input type="password" name="password" />
+        <input type="submit" value="Login" />
     </form>
+
 </body>
 </html>
